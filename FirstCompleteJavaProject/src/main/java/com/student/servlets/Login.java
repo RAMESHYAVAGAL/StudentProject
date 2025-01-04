@@ -24,9 +24,7 @@ public class Login extends HttpServlet {
 		
 		//creating the session object
 		HttpSession session=req.getSession();
-		
-		
-		
+
 		String mailId=req.getParameter("mail"); 
 		String password=req.getParameter("password"); 
      	PrintWriter out=resp.getWriter();
@@ -45,7 +43,7 @@ public class Login extends HttpServlet {
 //			   resp.sendRedirect("success.html");
 //			   req.setAttribute("success", "Successfully login");
 //			   RequestDispatcher rd=req.getRequestDispatcher("Login.jsp");
-//				   req.setAttribute("student", s);
+//			   req.setAttribute("student", s);
 				   session.setAttribute("student", s);
 				   RequestDispatcher rd=req.getRequestDispatcher("Dashboard.jsp");
 				   rd.forward(req, resp);
@@ -53,7 +51,7 @@ public class Login extends HttpServlet {
 			   else 
 			   { 
 //			    out.println("<h1>Failed to Login</h1>"); 
-//				   resp.sendRedirect("failure.html");
+//				resp.sendRedirect("failure.html");
 				   req.setAttribute("failure", "Failed to Login");
 				   RequestDispatcher rd=req.getRequestDispatcher("Login.jsp");
 				   rd.forward(req, resp);

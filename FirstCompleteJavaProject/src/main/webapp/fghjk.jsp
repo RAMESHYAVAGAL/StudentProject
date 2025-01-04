@@ -15,7 +15,7 @@
 color: #000080; 
 }
 .sub { 
-color: #1e90ff; 
+color: #1e90ff;
 } 
 .success 
 { 

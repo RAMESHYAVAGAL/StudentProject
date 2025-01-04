@@ -20,6 +20,7 @@ public class UpdateAccount extends HttpServlet {
 			String mail=req.getParameter("mail"); 
 			String branch=req.getParameter("branch"); 
 			String loc=req.getParameter("loc"); 
+			
 			HttpSession session=req.getSession(false); 
 			Student s1=(Student)session.getAttribute("student"); 
 			StudentDAO sdao=new StudentDAOImp(); 
